@@ -4,3 +4,9 @@ var a = a.fontcolor("red"); // Both this line and the one below set the color of
 var b = b.fontcolor("blue");
 document.write(a + b); // This will add text to an html document. //
 var c = (32 + 8); // A Simple mathmatical expression. //
+
+function FirstFunction() {
+    var sfr = "shrimp fried rice";
+    var result = sfr.fontcolor("purple");
+    document.getElementById("purple_shrimp").innerHTML = result;
+}
