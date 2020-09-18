@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        </head>
+
+            <script>
+            $(document).ready(function() {
+                 $("html").append( // append writes whatever is specified into the html portion of a document
+                    "<body>\
+                        <div id='container'>\
+                            <div id='inner'>\
+                                <h1>Basic jQuery</h1>\
+                                <p id='1'>Paragraph 1</p>\
+                                <p id='2'>Paragraph 2</p>\
+                                <p id='3'>Paragraph 3</p>\
+                                <p id='4'>Paragraph 4</p>\
+                            </div>\
+                        </div>\
+                    </body>"
+                    );    
+                    $("#1").click(function() {
+                        console.log("You clicked on paragraph 1"); // clicking p id 1 will log "You clicked paragraph 1"
+                    });
+                    $("#2").css({"color": "red"}); // adds css that changes the color of the text in p id 2
+                    $("#2").on({
+                        "click": function() {console.log( "Clicked!" ); }, //When p id 2 is clicked it will put "clicked" into the log
+                        "mouseover": function() {console.log( "Hovered!"); } //When p id 2 is hovered it will put "hovered" into the log
+                    });
+                    $("#3").click(function() {
+                        $('h1').hide(); // when p id 3 is clicked the h1 element disapears
+                    });
+                    $("#4").click(function() {
+                        $('html').fadeOut(2000); //fades out the entire html document in 2 seconds when clicked
+                    });
+                });
+        </script>
+    </html>
