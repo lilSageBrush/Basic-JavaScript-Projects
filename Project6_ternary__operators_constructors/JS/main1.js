@@ -24,9 +24,9 @@ console.log((3 < 2) ? 3 * 12.5 : (3 - 2) * 4 + 25);
 
 function Cats (Age) {
     this.Cats_Age = Age;
-    this.Cat_Years = CalcCatYears();
-function CalcCatYears() { 
-        var Place;
+    console.log(CalcCatYears());
+    function CalcCatYears() { 
+        var Place = 0;
         Place = this.Cats_Age;
         console.log(Place);
         console.log(Place = (Place < 2) ? Place * 12.5 : Place - 2 * 4 + 25);
@@ -34,7 +34,7 @@ function CalcCatYears() {
     }
 }
 
-var Nuna = new Cats(3, );
+var Nuna = new Cats(3);
 function Help() {
     document.getElementById("nuna").innerHMTL = Nuna.Cats_Years;
 }
